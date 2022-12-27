@@ -6,14 +6,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Url Shortner</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 
 <body>
+  <div class="container">
   <h1>URL Shortner</h1>
-  <form action="" method="post">
-    <label for="fullUrl"> Url</label>
-    <input type="url" name="fullUrl" id="fullUrl">
-    <button type="submit">Shorten Url</button>
+  <form action="" method="post" class="my-4 form-inline">
+    <label for="fullUrl" class="sr-only"> Url</label>
+    <input type="url" name="fullUrl" id="fullUrl" placeholder="Enter Url" required class="form-control col mr-2">
+    <button type="submit" class="btn btn-success"> Shorten Url</button>
   </form>
   <table>
     <thead>
@@ -35,6 +37,8 @@
       </tr>
     </tbody>
   </table>
+     
+</div>
 </body>
 
 </html>
