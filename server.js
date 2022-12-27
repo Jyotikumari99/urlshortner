@@ -16,4 +16,19 @@ app.post('/shortUrls',async(req,res)=>{
   await ShortUrl.create({full:req.body.fullUrl})/*for accessing the form use name same as form anme */
   res.redirect('/')/*redirecting to home page*/
 })
+
+/*to resolve the problem that shorten url cannot get we are riting this code and this code should always be in last*/
+app.get('/:shortUrl',async(req,res)=>{
+  const shortUrl=await ShortUrl.findOne({
+    short:req.params.shortUrl
+    
+  })
+  /*if url does not exist*/
+  if(shortUrl==null)
+  return res.sendStatus(404);
+  shortUrl.clicks++;
+  shortUrl.save();
+
+  res.redirect(shortUrl.full)
+})
 app.listen(process.env.PORT||5000);
