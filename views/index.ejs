@@ -12,12 +12,12 @@
 <body>
   <div class="container">
   <h1>URL Shortner</h1>
-  <form action="" method="post" class="my-4 form-inline">
+  <form action="/shortUrls" method="post" class="my-4 form-inline">
     <label for="fullUrl" class="sr-only"> Url</label>
     <input type="url" name="fullUrl" id="fullUrl" placeholder="Enter Url" required class="form-control col mr-2">
     <button type="submit" class="btn btn-success"> Shorten Url</button>
   </form>
-  <table>
+  <table class="table table-striped table-responsive">
     <thead>
       <tr>
         <th>Full Url</th>
